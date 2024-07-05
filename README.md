@@ -76,35 +76,33 @@
 
 
 <style>
+ 
   .img-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  .img-container > div {
-    flex: 1 1 100%;
-    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
     padding: 10px;
-    box-sizing: border-box;
   }
   @media (min-width: 600px) {
-    .img-container > div {
-      flex: 1 1 45%;
-      max-width: 45%;
+    .img-container {
+      grid-template-columns: 1fr 1fr;
     }
   }
   @media (min-width: 900px) {
-    .img-container > div {
-      flex: 1 1 30%;
-      max-width: 30%;
+    .img-container {
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
   @media (min-width: 1200px) {
-    .img-container > div {
-      flex: 1 1 20%;
-      max-width: 20%;
+    .img-container {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
     }
   }
+  .img-container img {
+    width: 100%;
+    height: auto;
+  }
+
 
   .qr-container {
     display: flex;
